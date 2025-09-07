@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics - Assignment 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Light mode */
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #020617;
+            --card-bg-color: #ffffff;
+            --card-border-color: #e2e8f0;
+            --heading-color: #1e293b;
+            --link-color: #2563eb;
+        }
+        /* Dark mode */
+        html.dark {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --card-bg-color: #1e293b;
+            --card-border-color: #334155;
+            --heading-color: #f1f5f9;
+            --link-color: #60a5fa;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .card {
+            background-color: var(--card-bg-color);
+            border-color: var(--card-border-color);
+        }
+        h1, h2, h3 {
+            color: var(--heading-color);
+        }
+        a {
+            color: var(--link-color);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="relative min-h-screen">
+        <!-- Theme Toggle Button -->
+        <div class="absolute top-4 right-4">
+            <button id="theme-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2" style="background-color: var(--card-bg-color); color: var(--text-color); border: 1px solid var(--card-border-color);">
+                <svg id="theme-icon-light" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <header class="text-center mb-12">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Data Analytics Assignment 1</h1>
+                <p class="mt-2 text-lg" style="color: var(--text-color);">UGCS-209</p>
+                <div class="mt-4 text-sm" style="color: var(--text-color);">
+                    <p><strong>Name:</strong> [Your Name]</p>
+                    <p><strong>Roll No:</strong> [Your Roll No]</p>
+                </div>
+            </header>
+
+            <main class="max-w-4xl mx-auto space-y-10">
+                <!-- Question 1 -->
+                <div class="card border rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">1. Is it correct to say that "data is objective, but information is subjective"?</h3>
+                    <div class="prose max-w-none space-y-4">
+                        <p>Yes, the statement that "data is objective, but information is subjective" is largely correct. To understand why, we must distinguish between data, facts, and information.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Data</strong> refers to raw, unorganized characters, numbers, or symbols without context. By itself, it is objective and has no inherent meaning. For example: The numbers 37, 38, 36.5.</li>
+                            <li><strong>Facts</strong> are pieces of data that have been verified as true and are universally accepted. Like data, facts are objective. For example: A patient's recorded body temperatures are 37°C, 38°C, and 36.5°C.</li>
+                            <li><strong>Information</strong> is created when data is processed, organized, and given context to make it meaningful. This is where subjectivity enters, as the interpretation can vary. For example: Based on the temperature data, one doctor might conclude, "The patient has a slight fever," while another might say, "The patient's temperature is fluctuating."</li>
+                        </ul>
+                        <p>Therefore, while the raw data points are objective, the meaning and insights (information) we derive from them can be subjective.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="card border rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">2. How can the challenges of Volume, Velocity, and Variety be extended to include Veracity and Value?</h3>
+                    <div class="prose max-w-none space-y-4">
+                        <p>The "3 Vs" can be extended to the "5 Vs" to provide a more complete picture of big data challenges:</p>
+                         <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Veracity:</strong> This refers to the quality, accuracy, and trustworthiness of data. Low-quality data leads to poor conclusions. For example, a marketing campaign will fail if the customer database has incorrect email addresses (low veracity).</li>
+                            <li><strong>Value:</strong> This refers to the usefulness of data. Data only has value if it can be turned into actionable insights that benefit the organization. For example, collecting customer purchase data only has value if it's used to create personalized recommendations that increase sales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="card border rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">3. Discuss the five key impacting areas for maximizing profitability: Economy, Trust, Regulation, Capitalization, and Clients.</h3>
+                     <div class="prose max-w-none space-y-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Economy:</strong> The economic environment dictates investment priorities. In a recession, a company uses data for cost-cutting, not expansion.</li>
+                            <li><strong>Trust:</strong> Handling data ethically and securely is crucial. A data breach destroys customer trust and revenue.</li>
+                            <li><strong>Regulation:</strong> Compliance with data laws like GDPR is mandatory. Non-compliance leads to heavy fines.</li>
+                            <li><strong>Capitalization:</strong> The financial investment in data infrastructure and talent. A large bank can afford an on-premise warehouse, while a startup may use cheaper cloud services.</li>
+                            <li><strong>Clients:</strong> Client needs should drive all data efforts. Netflix analyzes viewing habits to personalize content, which increases subscriber retention.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="card border rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">4. Analyze: "descriptive and diagnostic analytics explain the past, while predictive and prescriptive analytics shape the future."</h3>
+                    <div class="prose max-w-none space-y-4">
+                       <p>This statement is correct. The four types of analytics represent a progression from hindsight to foresight.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Descriptive (What happened?) & Diagnostic (Why?):</strong> These are retrospective. They analyze historical data to understand past events. Example: A report shows sales dropped (descriptive), and analysis reveals it was due to a competitor's discount (diagnostic).</li>
+                            <li><strong>Predictive (What will happen?) & Prescriptive (What to do?):</strong> These are forward-looking. They use past data to forecast and influence future events. Example: Forecasting future sales based on trends (predictive) and then recommending an optimal pricing strategy to boost those sales (prescriptive).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="card border rounded-xl p-6 sm:p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">5. If a company already has a Data Warehouse, does it really need a Data Lake?</h3>
+                    <div class="prose max-w-none space-y-4">
+                        <p>Yes, a company might still need a Data Lake because they serve different, complementary purposes.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>A <strong>Data Warehouse</strong> stores structured, processed data for business intelligence and reporting (e.g., weekly sales reports).</li>
+                            <li>A <strong>Data Lake</strong> stores vast amounts of raw, unstructured data (e.g., social media feeds, server logs) for data exploration and machine learning.</li>
+                        </ul>
+                        <p>They are not mutually exclusive. A Data Warehouse is for known questions and structured reporting by business users, while a Data Lake is for data scientists to discover new insights from raw, diverse datasets. Many modern data architectures use both together.</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="text-center mt-12 py-6 border-t" style="border-color: var(--card-border-color);">
+                <p class="text-sm" style="color: var(--text-color);">Lamrin Tech Skills University, Punjab</p>
+            </footer>
+
+        </div>
+    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIconLight = document.getElementById('theme-icon-light');
+        const themeIconDark = document.getElementById('theme-icon-dark');
+
+        // Check for saved theme in localStorage or use system preference
+        if (localStorage.getItem('color-theme') === 'dark' || 
+           (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIconLight.classList.remove('hidden');
+            themeIconDark.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIconDark.classList.remove('hidden');
+            themeIconLight.classList.add('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            // toggle theme
+            document.documentElement.classList.toggle('dark');
+
+            // save preference to localStorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('color-theme', 'dark');
+                themeIconLight.classList.remove('hidden');
+                themeIconDark.classList.add('hidden');
+            } else {
+                localStorage.setItem('color-theme', 'light');
+                themeIconDark.classList.remove('hidden');
+                themeIconLight.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
